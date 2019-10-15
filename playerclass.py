@@ -27,7 +27,7 @@ class Player:
         self.y = window.get_height() - self.height - 10
         self.color = color
 
-        self.base_vel = 8
+        self.base_vel = 6
         self.vel = 0
         self.inputs = set()
 

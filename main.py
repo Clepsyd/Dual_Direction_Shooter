@@ -19,8 +19,10 @@ targets = []
 run = True
 score = 0
 game_over = False
-countdown_len = randint(80, 110)
+countdown_len = randint(50, 70)
 target_countdown = countdown_len
+
+max_fires = 10
 
 # Fonts
 water_font = pygame.font.Font("Righteous-Regular.ttf", 48)
@@ -67,7 +69,7 @@ def draw_UI():
 
 def check_game_over():
     global run, game_over
-    if not player.ammo or len(targets) > 3:
+    if not player.ammo or len(targets) > max_fires:
         run = False
         game_over = True
         # font = pygame.font.Font("Righteous-Regular.ttf", 54)
