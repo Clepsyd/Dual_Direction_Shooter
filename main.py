@@ -19,7 +19,7 @@ targets = []
 run = True
 score = 0
 game_over = False
-countdown_len = randint(150, 190)
+countdown_len = randint(80, 110)
 target_countdown = countdown_len
 
 # Fonts
@@ -27,13 +27,15 @@ water_font = pygame.font.Font("Righteous-Regular.ttf", 48)
 score_font = pygame.font.Font("Righteous-Regular.ttf", 100)
 
 def render_targets():
-    global score
+    global score, player
     for target in targets:
         target.show()
         target.check_hit(player.bullets)
         if target.hp == 0:
             targets.remove(target)
             score += 10
+            player.ammo += 10
+
 
 def generate_targets():
     global target_countdown
