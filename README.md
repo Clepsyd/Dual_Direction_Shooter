@@ -5,16 +5,15 @@
 This is one of my first projects on pygame that sort of does something midly interesting.
 You're a square firefighter and fires appear randomly on the screen. You need to put them out.
 
-### * How to use:
-
-*Note: I haven't bundled this project, used **pipenv** or anything like that, but I plan to, I just don't understand it well enough yet.
-For now, it requires you to install yourself the same environment I had when I wrote this code...*
+### **How to install and run:**
 
 **I used python 3.7 and pygame 1.9.4.**
 
-* Install python => https://www.python.org/
-* Install pygame => `pip install pygame` or `pip3 install pygame`
-* Run the main script with python: `python main.py` or `python3 main.py`
+* Install python 3.7 => https://www.python.org/
+* Install pipenv => https://pipenv.kennethreitz.org/en/latest/install/#installing-pipenv
+* Install dependencies (pygame): `pipenv install`
+* Activate virtual environment: `pipenv shell`
+* Run the game through pipenv: `pipenv run python3 main.py`
 
 ### * How to play:
 
