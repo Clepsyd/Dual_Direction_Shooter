@@ -20,6 +20,8 @@ target_countdown = countdown_len
 run = True
 clock = pygame.time.Clock()
 framerate = 60
+water_font = pygame.font.Font("Righteous-Regular.ttf", 48)
+score_font = pygame.font.Font("Righteous-Regular.ttf", 100)
 
 while run:
 
@@ -37,6 +39,13 @@ while run:
     player.shoot(inputs)
     player.shot_vel = randint(10,20)
     player.bullets_update()
+    water_text = water_font.render(
+            f"Water: {player.ammo}",
+            False,
+            (255, 255, 255)
+        )
+    window.blit(water_text, (10, 10))
+
 
     if target_countdown == 0:
         # if len(targets):
@@ -63,14 +72,14 @@ while run:
     if not player.ammo or len(targets) > 3:
         run = False
         game_over = True
-        font = pygame.font.Font("Righteous-Regular.ttf", 54)
-        score_text = font.render(
+        # font = pygame.font.Font("Righteous-Regular.ttf", 54)
+        score_text = score_font.render(
             f"YOUR SCORE: {score}",
             False,
             (255, 255, 255)
         )
         window.fill((0, 0, 0))
-        window.blit(score_text, (20, 20))
+        window.blit(score_text, (window_width/2 - 100, window_height/2))
         pygame.display.flip()
 
 
