@@ -1,4 +1,3 @@
-# Dual_Direction_Shooter
 ### A very short firefighter game with squares and circles, made with pygame.
 ---
 
